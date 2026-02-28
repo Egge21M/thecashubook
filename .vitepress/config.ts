@@ -7,14 +7,21 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Outline', link: '/book-outline' },
-      { text: 'Chapter 1', link: '/chapters/01-the-problem-space' }
+      { text: 'Get Started', link: '/chapters/00-how-to-use-this-book' }
     ],
 
     sidebar: [
       {
         text: 'Book',
         items: [
-          { text: 'Table of Contents', link: '/book-outline' }
+          { text: 'Table of Contents', link: '/book-outline' },
+          { text: 'Spec & Implementation Map', link: '/reference/spec-and-implementation-map' }
+        ]
+      },
+      {
+        text: 'Part 0 — Read This First',
+        items: [
+          { text: 'Chapter 0 — How to Use This Book', link: '/chapters/00-how-to-use-this-book' }
         ]
       },
       {

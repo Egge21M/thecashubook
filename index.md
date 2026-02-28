@@ -10,8 +10,8 @@ hero:
       text: Read the Book Outline
       link: /book-outline
     - theme: alt
-      text: Start Chapter 1
-      link: /chapters/01-the-problem-space
+      text: Start Here (Chapter 0)
+      link: /chapters/00-how-to-use-this-book
 
 features:
   - title: Practical, not theoretical

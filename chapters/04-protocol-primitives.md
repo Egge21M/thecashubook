@@ -62,8 +62,8 @@ For completeness, here is the protocol-level view of the classic blind-signature
    - Alice sends blinded point to Bob: **B\_ = Y + rG**
 
 4. **Signing (blind domain)**
-   - Bob signs blinded point and returns: \__C_ = kB\_\*\*
-   - (This can be viewed as the core DH-style step in the flow.)
+   - Bob signs blinded point and returns: **C' = kB'**
+   - (This is the core blind-DH style step in the flow.)
 
 5. **Unblinding**
    - Alice computes:
@@ -81,19 +81,43 @@ This chapter stays implementation-focused, but if you want the formal spec langu
 
 ## 4.3 Objects and terminology: proofs, outputs, promises, keysets
 
-**Draft notes**
+If your team mixes these up, everything gets confusing fast.
 
-- Define each object in developer terms.
-- Show object lifecycle handoff between wallet and mint.
-- Include one compact object relationship diagram (later in `reference/`).
+- **Output (blinded message)**: created by wallet before signing; asks the mint to sign a specific amount without revealing the secret.
+- **Promise (blind signature)**: mint response to an output; still in blinded domain until wallet unblinds.
+- **Proof**: wallet-side unblinded token that can be spent/swapped/melted.
+- **Keyset**: mint signing key collection (with keyset id); determines which pubkeys validate proofs.
+
+Lifecycle view:
+
+1. Wallet creates outputs.
+2. Mint returns promises.
+3. Wallet unblinds promises into proofs.
+4. Proofs are later consumed as inputs in swap/melt.
+
+Two implementation rules worth enforcing in code:
+
+- Always persist keyset id with proofs.
+- Never mark proofs as spent before operation confirmation; use `pending` state first.
 
 ## 4.4 Denominations and amount decomposition
 
-**Draft notes**
+Cashu amounts are represented as sets of proofs (denominations). How you decompose amounts directly affects performance and privacy.
 
-- Why decomposition exists and how it affects spendability.
-- Tradeoffs between larger vs smaller proof sets.
-- Practical decomposition strategy choices.
+Common strategies:
+
+- **Binary decomposition** (e.g., 13 => 8+4+1)
+  - Good baseline; simple and predictable.
+- **Privacy-aware randomized decomposition**
+  - Reduces deterministic amount fingerprints at the cost of more complexity.
+- **Fee-aware decomposition**
+  - Chooses splits that reduce future melt/swap overhead.
+
+Practical guidance for first implementations:
+
+- Start with binary decomposition plus consolidation rules.
+- Add periodic defragmentation swap when proof count exceeds threshold.
+- Add randomized splitting only after you can measure metadata leakage and retry costs.
 
 ---
 

@@ -2,25 +2,18 @@
 
 ## Table of Contents (Outline)
 
+## Part 0 — Read This First
+
+0. [How to Use This Book](/chapters/00-how-to-use-this-book)
+   - Fast path for builders who want to ship quickly
+   - Full path for deep protocol understanding
+   - Book conventions and implementation assumptions
+
 ## Part I — Why Cashu Exists
 
 1. [The Problem Space](/chapters/01-the-problem-space)
-   - Why Bitcoin payments still feel broken for many product teams
-   - Custodial account balances vs bearer digital cash
-   - Where Lightning helps and where product friction remains
-   - Why developers need a better primitive for internet-native value
-
 2. [What Cashu Is (and Is Not)](/chapters/02-what-cashu-is-and-is-not)
-   - Cashu as custodial ecash based on blind signatures
-   - Threat model and trust boundaries in plain engineering terms
-   - Common misconceptions ("private" vs "invisible", "ecash" vs "tokenized account")
-   - The practical value proposition for builders
-
 3. [Core Mental Model](/chapters/03-core-mental-model)
-   - Mints, wallets, proofs, keysets, quotes, and settlement loops
-   - How value moves through mint/swap/melt operations
-   - What can fail, what can be recovered, and what must be logged
-   - Decision framework for building production-grade Cashu apps
 
 ## Part II — Building Blocks (Developer Core)
 
@@ -41,8 +34,12 @@
 
 ---
 
+## Companion references
+
+- [Spec & Implementation Map](/reference/spec-and-implementation-map)
+
 ## Writing status
 
-- ✅ Outline published
-- ✅ Drafts started: Chapters 1–3
-- 🟨 In progress: Expand all chapters with code-backed examples and checklists
+- ✅ Outline revised for developer-first flow
+- ✅ Drafts started: Chapters 0–4
+- 🟨 In progress: Expand chapters 5–10 with code-backed flows and failure tables
