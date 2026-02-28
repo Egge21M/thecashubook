@@ -5,8 +5,7 @@
 ## Part 0 — Read This First
 
 0. [How to Use This Book](/chapters/00-how-to-use-this-book)
-   - Fast path for builders who want to ship quickly
-   - Full path for deep protocol understanding
+   - Quick path (build-first) vs full path (mastery)
    - Book conventions and implementation assumptions
 
 ## Part I — Why Cashu Exists
@@ -27,10 +26,10 @@
 
 ## Part III — Real Products and Patterns
 
-11. Use Cases That Actually Work
-12. Design Patterns
-13. Production Playbook
-14. The Road Ahead
+11. [Use Cases That Actually Work](/chapters/11-use-cases-that-actually-work)
+12. [Design Patterns](/chapters/12-design-patterns)
+13. [Production Playbook](/chapters/13-production-playbook)
+14. [The Road Ahead](/chapters/14-the-road-ahead)
 
 ---
 
@@ -41,5 +40,5 @@
 ## Writing status
 
 - ✅ Outline revised for developer-first flow
-- ✅ Drafts started: Chapters 0–4
-- 🟨 In progress: Expand chapters 5–10 with code-backed flows and failure tables
+- ✅ Draft files created: Chapters 0–14
+- 🟨 In progress: expand chapters 5–14 from structured templates to full narrative drafts

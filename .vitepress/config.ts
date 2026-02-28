@@ -43,6 +43,15 @@ export default defineConfig({
           { text: 'Chapter 9 — Privacy Engineering', link: '/chapters/09-privacy-engineering' },
           { text: 'Chapter 10 — Interoperability & Standards', link: '/chapters/10-interoperability-standards' }
         ]
+      },
+      {
+        text: 'Part III — Real Products and Patterns',
+        items: [
+          { text: 'Chapter 11 — Use Cases That Actually Work', link: '/chapters/11-use-cases-that-actually-work' },
+          { text: 'Chapter 12 — Design Patterns', link: '/chapters/12-design-patterns' },
+          { text: 'Chapter 13 — Production Playbook', link: '/chapters/13-production-playbook' },
+          { text: 'Chapter 14 — The Road Ahead', link: '/chapters/14-the-road-ahead' }
+        ]
       }
     ],
 

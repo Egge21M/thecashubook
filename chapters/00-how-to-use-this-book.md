@@ -10,19 +10,33 @@ This book is for developers building with Cashu: wallet authors, backend enginee
 - API design and backend fundamentals
 - Basic applied cryptography hygiene (keys, signatures, randomness)
 
-## Fast path vs full path
+## Quick path vs full path
 
-### Fast path (ship quickly)
+### Quick path (build-first, minimal reading)
 
-1. Chapter 1–3 (mental model)
-2. Chapter 5 (Mint API)
-3. Chapter 6 (Wallet architecture)
-4. Chapter 7 (Lightning integration)
-5. Chapter 8 + 9 checklists before production
+Goal: ship a first working prototype safely with minimal theory detours.
 
-### Full path (deep understanding)
+Read in this order:
 
-Read in order, then implement the references and exercises.
+1. **Chapter 0** — How to use this book
+2. **Chapter 2** — What Cashu is (and is not)
+3. **Chapter 3** — Core mental model
+4. **Chapter 5** — Mint API deep dive
+5. **Chapter 6** — Wallet architecture
+6. **Chapter 7** — Lightning integration
+7. **Chapter 8 + 9 checklists** — Security + privacy gates before launch
+
+Then backfill:
+
+- **Chapter 1** for product framing
+- **Chapter 4** for deeper primitives
+- **Chapter 10+** for interoperability and production scale
+
+### Full path (mastery, end-to-end)
+
+Goal: build deep protocol understanding and long-term production judgment.
+
+Read every chapter in order (0 → 14), then implement examples, failure drills, and deployment checklists.
 
 ## Book conventions
 
